@@ -49,7 +49,7 @@ export const login = (email, password) => async (dispatch) => {
                 'Content-Type': 'application/json'
             }
         }
-        const {data} = await axios.post('/api/login', {email, password}, config)
+        const {data} = await axios.post('http://localhost:4000/api/login', {email, password}, config)
 
         dispatch({
             type:LOGIN_SUCCESS,
@@ -71,10 +71,10 @@ export const register = (userData) => async (dispatch) => {
 
         const config={
             headers: {
-                'Content-Type': 'multipart/form-data'
+                'Content-Type':  'application/json'
             }
         }
-        const {data} = await axios.post('http://localhost:4000/api/usuario/registro', userData, config)
+        const {data} = await axios.post('/api/usuario/registro', userData, config)
 
         dispatch({
             type: REGISTER_USER_SUCCESS,
@@ -90,7 +90,7 @@ export const register = (userData) => async (dispatch) => {
 }
 
 //CARGAR EL USUARIO (LOAD USER)
-export const loadUser=()=> async(dispatch) =>{
+export const loadUser = () => async(dispatch) =>{
     try{
         dispatch({type: LOAD_USER_REQUEST})
         const {data} = await axios.get("/api/yo")
@@ -146,6 +146,7 @@ export const logout = () => async (dispatch)=>{
         })
     }
 }
+
 
 //ACTUALIZAR CONTRASEÑA
 export const updatePassword = (passwords) => async (dispatch) => {

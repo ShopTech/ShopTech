@@ -7,7 +7,6 @@ import { ProductDetails } from './components/products/ProductDetails';
 //Router traido desde react-router-dom (no confundir con el de express)
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Dashboard from './components/admin/Dashboard';
-import ProductsList from './components/admin/ProductsList';
 import NewProduct from './components/admin/NewProduct';
 import Cart from './components/cart/Cart';
 import { Login } from './components/user/Login';
@@ -33,6 +32,7 @@ import UsersList from './components/admin/UserList';
 import UpdateUser from './components/admin/UpdateUser';
 import ProductReviews from './components/admin/ProductReviews';
 import { useSelector } from 'react-redux';
+import ProductsList from './components/admin/ProductsList';
 
 function App() {
   useEffect(() => {
@@ -55,6 +55,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/password/forgot" element={<ForgotPassword />} />
             <Route path="/resetPassword/:token" element={<NewPassword />} />
+            
 
 
             {/*Ruta protegida*/}
@@ -93,13 +94,15 @@ function App() {
               element={<ProtectedRoute><Success /></ProtectedRoute>} />
 
             <Route path="/myOrders"
-              element={<ProtectedRoute><ListOrder /></ProtectedRoute>} />
+              element={<ListOrder />} />
 
             <Route path="/order/:id"
               element={<ProtectedRoute><OrderDetails /></ProtectedRoute>} />
 
             <Route path="/productList"
-              element={<ProtectedRoute><ProductsList /></ProtectedRoute>} />
+              element={<ProtectedRoute><ProductsList /></ProtectedRoute>} />  
+
+            
 
             <Route path="/nuevoProducto"
               element={<ProtectedRoute><NewProduct /></ProtectedRoute>} />
