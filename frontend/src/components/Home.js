@@ -43,11 +43,11 @@ export const Home = () => {
                                 className='t-slider'
                                 marks={{
                                     100: `$100`,
-                                    1000000: `$1000000`
+                                    10000000: `$1000000`
                                 }}
                                 min={100}
-                                max={1000000}
-                                defaultValue={[100, 1000000]}
+                                max={10000000}
+                                defaultValue={[100, 10000000]}
                                 tipFormatter={value => `$${value}`}
                                 tipProps={{
                                     placement: 'top',
@@ -70,7 +70,7 @@ export const Home = () => {
                                                 </div>
                                                 <span id="No_de_opiniones"> {producto.numCalificaciones} Reviews</span>
                                             </div>
-                                            <p className='card-text'>${producto.precio}</p><Link to={`/producto/${producto._id}`} id="view_btn" className='btn btn-block'>
+                                            <p className='card-text'>COP {producto.precio}</p><Link to={`/producto/${producto._id}`} id="view_btn" className='btn btn-block'>
                                                 Ver detalle
                                             </Link>
                                         </div>
