@@ -2,6 +2,9 @@
   "name": "shoptech",
   "version": "1.0.0",
   "description": "Tienda Virtual de Tecnología",
+  "engines": {
+    "node": "18.x"
+  },
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
