@@ -1,4 +1,4 @@
-const mongoose = require("mongoose")
+cconst mongoose = require("mongoose")
 
 const orderSchema = mongoose.Schema({
     envioInfo: {
