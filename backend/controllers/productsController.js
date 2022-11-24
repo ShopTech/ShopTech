@@ -40,7 +40,7 @@ exports.getProductById = catchAsyncErrors(async (req, res, next) => {
 
     res.status(200).json({
         success: true,
-        message: "Aqui debajo encuentras información sobre tu producto: ",
+        message: "Todos los productos: ",
         product
     })
 })
