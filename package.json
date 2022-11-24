@@ -10,7 +10,7 @@
     "start": "node backend/server.js",
     "dev": "set NODE_ENV=DEVELOPMENT&& nodemon backend/server",
     "prod": "set NODE_ENV=PRODUCTION&& nodemon backend/server",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && NODE_OPTIONS=--openssl-legacy-provider && npm install --force --prefix front && npm run build --prefix front"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && NODE_OPTIONS=--openssl-legacy-provider && npm install --force --prefix frontend && npm run build --prefix frontend"
   },
   "repository": {
     "type": "git",
