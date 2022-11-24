@@ -51,7 +51,7 @@ exports.loginUser = catchAsyncErrors(async(req, res, next)=>{
         return next(new ErrorHandler("Contraseña invalida",401))
     }
 
-    tokenEnviado(user,200,res)
+    tokenEnviado(user,202,res)
 
 })
 
