@@ -32,7 +32,7 @@ exports.getProducts = catchAsyncErrors(async (req, res, next) => {
 
 //Ver un producto por ID
 exports.getProductById = catchAsyncErrors(async (req, res, next) => {
-    const product = await producto.findById(req.params.id)
+    const products = await producto.findById(req.params.id)
 
     if (!product) {
         return next(new ErrorHandler("Producto no encontrado", 404))
