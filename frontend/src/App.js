@@ -44,7 +44,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <div className=''>
+        <div className='container'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
