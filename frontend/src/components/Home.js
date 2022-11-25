@@ -15,6 +15,7 @@ export const Home = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const { loading, products, error, resPerPage, productsCount } = useSelector(state => state.products)
     const alert = useAlert();
+    
 
     const dispatch = useDispatch();
     useEffect(() => {
@@ -70,7 +71,7 @@ export const Home = () => {
                                                 </div>
                                                 <span id="No_de_opiniones"> {producto.numCalificaciones} Reviews</span>
                                             </div>
-                                            <p className='card-text'>COP {producto.precio}</p><Link to={`/producto/${producto._id}`} id="view_btn" className='btn btn-block'>
+                                            <p className='card-text'>COP $ {new Intl.NumberFormat('de-DE').format(producto.precio)}</p><Link to={`/producto/${producto._id}`} id="view_btn" className='btn btn-block'>
                                                 Ver detalle
                                             </Link>
                                         </div>

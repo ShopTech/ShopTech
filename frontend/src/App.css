@@ -498,7 +498,7 @@ footer {
 #sidebar {
   min-width: 100%;
   max-width: 100%;
-  background: #232f3e;
+  background: #0D4C92;
   color: #fff;
   transition: all 0.3s;
 }
@@ -512,7 +512,7 @@ footer {
 }
 #sidebar ul.components {
   padding: 5px 0px;
-  border-bottom: 1px solid #232f3e;
+  border-bottom: 1px solid #0D4C92;
 }
 
 #sidebar ul li a {
