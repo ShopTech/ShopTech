@@ -44,7 +44,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <div className='container-lg'>
+        <div className='container-xxl'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
